@@ -39,6 +39,7 @@ PRODUCT_COPY_FILES += \
     device/samsung/skyrocket/ramdisk/ueventd.rc:root/ueventd.rc \
     device/samsung/skyrocket/ramdisk/init.emmc.rc:root/init.emmc.rc
 
+
 # BT firmware
 PRODUCT_COPY_FILES += \
     device/samsung/skyrocket/firmware/bcm4330B1.hcd:system/etc/firmware/bcm4330B1.hcd
@@ -56,3 +57,12 @@ $(call inherit-product-if-exists, vendor/samsung/skyrocket/skyrocket-vendor.mk)
 
 #WIFI_BAND := 802_11_ABG
 #$(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4330/device-bcm.mk)
+
+# Recovery
+PRODUCT_COPY_FILES += \
+    device/samsung/skyrocket/recovery/root/sbin/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh
+
+#ifeq ($(TARGET_RECOVERY_KERNEL),)
+#        LOCAL_KERNEL := device/samsung/skyrocket/recovery/prebuilt/kernel-recovery
+#endif
+
