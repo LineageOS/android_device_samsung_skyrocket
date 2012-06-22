@@ -91,3 +91,8 @@ TARGET_NO_INITLOGO := true
 # Preload the boot animation to avoid jerkiness
 TARGET_BOOTANIMATION_PRELOAD := true
 
+# Recovery
+BOARD_CUSTOM_RECOVERY_GRAPHICS := device/samsung/skyrocket/recovery/minui/graphics.c
+TARGET_PREBUILT_RECOVERY_KERNEL := device/samsung/skyrocket/recovery/prebuilt/kernel-recovery
+TARGET_RECOVERY_INITRC := device/samsung/skyrocket/recovery/root/init.rc
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
